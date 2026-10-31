@@ -16,6 +16,10 @@ Baseline: GitHub commit `92b0f207d68f7660d648c8ebbd0eb47d4f7ab508`. The original
 
 Screenshot: [Responsive submission evidence](docs/enquiry-responsive-qa.jpg).
 
+## Hosted smoke test
+
+The deployed owner-private Worker accepted a synthetic sample enquiry and returned HTTP 200 with `status: test` and `delivered: false`. Reference: `889500e8-304b-415b-a2b2-429ed09a5aaf`. This verifies hosted API routing, test configuration and D1 receipt persistence; it does not verify a CRM destination.
+
 ## Verification limits / remaining activation
 
 Provider calls use fixtures in automated tests. The private test environment never calls a real CRM or WhatsApp service. Live Interakt credentials, subscription access, webhook ownership, real Turnstile verification, staff notification and end-to-end lead delivery remain unverified. Browser coverage uses desktop Chrome with responsive frames, not physical iOS/Android devices or mobile keyboards.

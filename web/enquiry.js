@@ -78,6 +78,7 @@ export function initEnquiry(download) {
   });
   $('#remove-estimate').addEventListener('click',()=>{if(form.elements.message.value===autoBrief)form.elements.message.value='';setScope(null);announce('Estimate removed. Please review your project brief before sending.');});
   function setScope(value) {
+    if(!value && scope && form.elements.message.value===autoBrief)form.elements.message.value='';
     scope=value?{...value}:null;autoBrief=value?form.elements.message.value:'';
     $('#attached-estimate').hidden=!scope;
     $('#attached-estimate-text').textContent=scope?`${scope.type==='office'?'Office / Commercial':'Residential'} · ${scope.tier} · ${scope.area.toLocaleString('en-IN')} sq ft. Selected options and the server-calculated indicative budget will be included.`:'';
