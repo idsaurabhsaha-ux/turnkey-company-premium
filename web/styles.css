@@ -12,3 +12,10 @@
 .calculator-panel{scroll-margin-top:120px}
 @media(max-width:600px){.field-grid{grid-template-columns:1fr;gap:0}input,select,textarea,.field-grid input,.field-grid select{font-size:16px}.field-grid label,label{font-size:12px}.field-grid input::placeholder,input::placeholder,textarea::placeholder{font-size:13px}.calculator-panel{scroll-margin-top:100px}.form-note{font-size:11px}.check-label{font-size:11px}}
 @media(max-width:360px){.site-header .brand{width:130px}.site-header .nav-cta{gap:7px;font-size:9px;padding:8px}.hero h1{font-size:43px}}
+
+/* Accessible submission states retain the existing Premium palette. */
+.submission-status{margin-top:20px;padding:18px;border:1px solid #737373;border-radius:4px;color:#eee;line-height:1.6;overflow-wrap:anywhere;font-size:14px}
+.submission-status[data-kind="warning"]{border-color:#dd9859;color:#ffcca0}.submission-status[data-kind="success"]{border-color:#79b7a5;color:#b6e5d7}.submission-status[data-kind="test"]{border-color:#6e94b5;color:#c5def3}
+.enquiry-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:18px}.attached-estimate{padding:16px;border:1px solid #555;margin:18px 0;font-size:14px;line-height:1.6}.attached-estimate p{margin:8px 0}
+.spam-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+button:disabled{opacity:.55;cursor:wait}#enquiry-challenge{margin:16px 0;max-width:100%;overflow:hidden}input[aria-invalid="true"]{border-color:#dd9859}

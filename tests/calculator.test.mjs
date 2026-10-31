@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {calculateEstimate,PRICING} from '../dist/calculator.js';
+import {calculateEstimate,PRICING} from '../web/calculator.js';
 test('Premium residential example separates optional scope and GST',()=>{
   const r=calculateEstimate({type:'residential',tier:'Premium',area:1200,kitchen:true,storage:true,waterproofing:false});
   assert.equal(r.base,3240000);assert.equal(r.subtotal,3940000);assert.equal(r.low,3546000);assert.equal(r.high,4334000);assert.equal(r.totalLow,4184280);assert.equal(r.totalHigh,5114120);
